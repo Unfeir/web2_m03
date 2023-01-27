@@ -60,6 +60,16 @@ if __name__ == '__main__':
     print(f'pool_ex: {time() - start_pool}')
 
 
+"""
+result:
+single: 12.971923351287842
+semaphore: 3.5136280059814453
+pool: 3.094470739364624
+pool_ex: 15.939355850219727
+
+
+"""
+
 
 
 
