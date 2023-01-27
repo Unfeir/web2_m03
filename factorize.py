@@ -57,7 +57,7 @@ if __name__ == '__main__':
     with concurrent.futures.ProcessPoolExecutor(cpu_count()) as executor:
         for number in n:
             factorize_p(number)
-    print(f'pool_ex: {time() - start_pool}')
+    print(f'pool_ex: {time() - start_pool_ex}')
 
 
 """
