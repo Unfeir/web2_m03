@@ -51,13 +51,13 @@ if __name__ == '__main__':
     start_pool = time()
     with Pool(processes=cpu_count()) as pool:
         pool.map(factorize_p, n)
-    print(f'semaphore_pool: {time() - start_pool}')
+    print(f'pool: {time() - start_pool}')
 # metod 4 POOL_EX
     start_pool_ex = time()
     with concurrent.futures.ProcessPoolExecutor(cpu_count()) as executor:
         for number in n:
             factorize_p(number)
-    print(f'semaphore_pool_ex: {time() - start_pool}')
+    print(f'pool_ex: {time() - start_pool}')
 
 
 
