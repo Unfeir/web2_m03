@@ -62,13 +62,13 @@ if __name__ == '__main__':
         pool.map(factorize_p, n)
     print(f'pool: {time() - start_pool}')
 
- # metod 3 POOL
+ # metod 3 POOL_ASINC
     start_pool_2 = time()
     with Pool(processes=cpu_count()) as pool:
         pool.map_async(factorize_p, n)
         # pool.close()  # перестати виділяти процеси в пулл
         # pool.join()  # дочекатися закінчення всіх процесів
-    print(f"pool: {time() - start_pool_2}")
+    print(f"pool_asinc: {time() - start_pool_2}")
 
     # metod 4 POOL_EX
     start_pool_ex = time()
